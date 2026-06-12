@@ -1,0 +1,245 @@
+/* ==========================================================================
+   PALETA DE CORES (Baseada em Verde-Claro e Natureza)
+   ========================================================================== */
+:root {
+    --verde-principal: #a3e635; /* Verde-claro moderno e vibrante */
+    --verde-escuro: #15803d;    /* Verde floresta para contrastes e textos */
+    --verde-fundo: #f0fdf4;     /* Fundo bem claro e suave */
+    --branco: #ffffff;
+    --cinza-escuro: #1e293b;   /* Para leitura confortável */
+    --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Deixa o clique no menu suave */
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--verde-fundo);
+    color: var(--cinza-escuro);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: var(--verde-escuro);
+}
+
+/* ==========================================================================
+   PARTE 1: MENU COM LINKS
+   ========================================================================== */
+.menu-navegacao {
+    background-color: var(--branco);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.container-menu {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--verde-escuro);
+}
+
+.links-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.links-menu a {
+    text-decoration: none;
+    color: var(--cinza-escuro);
+    font-size: 1.3rem; /* Fonte grande e legível */
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.links-menu a:hover {
+    color: var(--verde-escuro);
+}
+
+/* ==========================================================================
+   PARTE 2: PARTE DE DESTAQUE
+   ========================================================================== */
+.secao-destaque {
+    margin-top: 80px; /* Espaço para não sumir atrás do menu */
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, var(--verde-fundo) 0%, #d9f99d 100%);
+    text-align: center;
+}
+
+.conteudo-destaque {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.conteudo-destaque h1 {
+    font-size: 3rem; /* Fonte bem grande e moderna */
+    margin-bottom: 1.5rem;
+}
+
+.conteudo-destaque p {
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+}
+
+.botao-acao {
+    display: inline-block;
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    padding: 1rem 2.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(21, 128, 61, 0.3);
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.botao-acao:hover {
+    background-color: #166534;
+    transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   PARTE 3: PARTE DE SERVIÇO E CONTATOS
+   ========================================================================== */
+.secao-servicos {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.secao-servicos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.cards-servicos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.card {
+    background-color: var(--branco);
+    padding: 2.5rem;
+    border-radius: 20px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    border-bottom: 5px solid var(--verde-principal);
+}
+
+.card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: 1.2rem;
+}
+
+/* Bloco de Contatos */
+.bloco-contatos {
+    background-color: var(--branco);
+    padding: 3rem 2rem;
+    border-radius: 25px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.bloco-contatos h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.texto-contato {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.links-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.btn-rede-social {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    color: var(--branco);
+    transition: opacity 0.2s;
+}
+
+.btn-rede-social:hover {
+    opacity: 0.9;
+}
+
+.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.whatsapp {
+    background-color: #25D366;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (Para funcionar perfeitamente em celulares)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .container-menu {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .links-menu {
+        gap: 1rem;
+    }
+
+    .links-menu a {
+        font-size: 1.1rem;
+    }
+
+    .conteudo-destaque h1 {
+        font-size: 2.2rem;
+    }
+
+    .conteudo-destaque p {
+        font-size: 1.2rem;
+    }
+}
